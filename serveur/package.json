@@ -1,0 +1,24 @@
+{
+  "name": "serveur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "knex": "^0.14.6",
+    "mariasql": "^0.2.6",
+    "mssql": "^4.1.0",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "nodemon": "^1.17.5",
+    "oracle": "^0.4.1",
+    "pg": "^7.4.3",
+    "socket.io": "^2.1.1",
+    "sqlite3": "^4.0.0"
+  }
+}
