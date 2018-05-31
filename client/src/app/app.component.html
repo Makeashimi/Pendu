@@ -13,6 +13,10 @@
     <input [(ngModel)] = "letter" name = "letter" placeholder = "Entrez une lettre" maxlength = "1" required>
     <button (click) = "check_letter()">Testez cette lettre</button>
 
-    <div>Nombre d'échecs : {{ deathcounter }}/10</div>
+    <div>Nombre d'échecs : {{ deathcounter }}/10</div><br/><br/>
+
+    <div>Entrez un nouveau mot</div>
+    <input [(ngModel)] = "request" name = "request">
+    <button (click) = "request_word()">Envoyez ce mot</button>
   </body>
 </html>

@@ -18,4 +18,8 @@ export class AppService {
   		});
   		this.connection.emit('demande:mot', 'ENVOIE UN MOT !!');
   	}
+
+  	send_request(request) {
+  		this.connection.emit('ajout:mot', request);
+  	}
 }

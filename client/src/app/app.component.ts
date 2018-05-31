@@ -14,6 +14,7 @@ export class AppComponent {
   private test: boolean;
   private tab = [];
   public letter;
+  public request;
 
 	constructor(private myService: AppService) {
 		this.deathcounter = 0;
@@ -43,7 +44,10 @@ export class AppComponent {
         this.listLetters.push(this.letter);
         let nb:number = this.tab.indexOf('_ ');
         if (nb == -1)
+        {
           alert("Bravo ! T'as trouvé le mot !! :))");
+          this.deathcounter = 10;
+        }
       }
       if (this.test == false) {
         //2x la même lettre écrite ou pas la bonne lettre
@@ -53,6 +57,10 @@ export class AppComponent {
         }
       }
     }
+  }
+
+  request_word() {
+    this.myService.send_request(this.request);
   }
 }
 
@@ -67,3 +75,5 @@ export class AppComponent {
 
 //CREATE SCHEMA test
 //CREATE TABLE pendu (word text, difficulty integer, succeed boolean)
+//insert into test.pendu (word, difficulty, succeed) values ('oiseau', 3, false)
+//DELETE FROM test.pendu WHERE word = 'pigeon'
